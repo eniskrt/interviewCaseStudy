@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.CaseStudyPage;
@@ -18,6 +19,7 @@ public class CaseStudyStepDefinition {
     CaseStudyPage caseStudyPage = new CaseStudyPage();
     Faker faker = new Faker();
     Actions actions = new Actions(Driver.getDriver());
+    JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
     String fakeEmail;
     String fakeEmailHandle;
     String caseStudyPageHandle;
@@ -124,25 +126,30 @@ public class CaseStudyStepDefinition {
         caseStudyPage.agreeAndSignupButton.click();
     }
 
+    @When("Navigate to {string} address to take the received code.")
+    public void navigateToFakeEmailAddressAgain(String fakeMailAddress) {
+        Driver.getDriver().switchTo().window(fakeEmailHandle);
+        ReusableMethods.wait(5);
+    }
+
     @When("Take the confirmation code from inbox.")
-    public void take_the_confirmation_code_from_inbox() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void takeTheConfirmationCodeFromInbox() {
+        jse.executeScript("arguments[0].click();", caseStudyPage.tempmailRefleshButton);
+        ReusableMethods.wait(2);
+        jse.executeScript("arguments[0].click();", caseStudyPage.tempmailFirstEmail);
+        ReusableMethods.wait(2);
     }
     @When("Enter the confirmation code to pop-up.")
-    public void enter_the_confirmation_code_to_pop_up() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void enterTheConfirmationCodeToPopup() {
+
     }
     @Then("Click the Ok button.")
-    public void click_the_ok_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void clickTheOkButton() {
+
     }
     @Then("Verify")
     public void verify() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
     @And("Quit the browser.")
