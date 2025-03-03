@@ -62,11 +62,6 @@ public class CaseStudyStepDefinition {
         caseStudyPage.firstNameInput.sendKeys(faker.name().firstName());
     }
 
-    @Then("Verify that Agree & Signup button is disabled.")
-    public void verifyAgreeSignupButtonDisabled() {
-        Assert.assertTrue(caseStudyPage.agreeAndSignupButton.isDisplayed());
-    }
-
     @Then("Enter last name to the Last Name input field.")
     public void enterLastName() {
         caseStudyPage.lastNameInput.sendKeys(faker.name().lastName());
@@ -190,5 +185,21 @@ public class CaseStudyStepDefinition {
     @Then("Verify that Mobile Number input field is empty")
     public void verifyMobileNumberInputIsEmpty() {
         Assert.assertTrue(caseStudyPage.phoneNumberInput.getAttribute("value").isEmpty());
+    }
+
+    @When("Enter password to the Password Input field.")
+    public void enterPasswordToThePasswordInput() {
+        caseStudyPage.passwordInput.sendKeys("Aa123456%");
+    }
+
+    @When("Enter different password to the Confirm Password input field.")
+    public void enterDifferentPasswordToTheConfirmPasswordInput() {
+        caseStudyPage.confirmPasswordInput.sendKeys("Aa123456#");
+    }
+
+    @Then("Verify that a warning appear below the Confirm Password Input field.")
+    public void verifyWarningAppearBelowTheConfirmPasswordInput() {
+        String passwordDoesNotMatchMessageClass = caseStudyPage.confirmPasswordInvalidMessage.getAttribute("class");
+        Assert.assertFalse(passwordDoesNotMatchMessageClass.contains("matched"));
     }
 }

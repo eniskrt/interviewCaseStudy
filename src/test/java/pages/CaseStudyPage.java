@@ -58,12 +58,16 @@ public class CaseStudyPage {
     public WebElement termsOfPolicyCheckBox;
 
     //PasswordInput
-    @FindBy(xpath = "/html/body/app-root/app-full-layout/sign-up1/div/div[1]/perfect-scrollbar/div/div[1]/div/form/div[4]/nz-form-item/nz-form-control/div/div/nz-input-group")
+    @FindBy(xpath = "//app-full-layout/sign-up1/div/div[1]/perfect-scrollbar/div/div[1]/div/form/div[4]/nz-form-item/nz-form-control/div/div/nz-input-group")
     public WebElement passwordInput;
 
     //ConfirmPasswordInput
-    @FindBy(xpath = "/html/body/app-root/app-full-layout/sign-up1/div/div[1]/perfect-scrollbar/div/div[1]/div/form/div[5]/nz-form-item/nz-form-control/div/div/nz-input-group")
+    @FindBy(xpath = "//app-full-layout/sign-up1/div/div[1]/perfect-scrollbar/div/div[1]/div/form/div[5]/nz-form-item/nz-form-control/div/div/nz-input-group")
     public WebElement confirmPasswordInput;
+
+    //ConfirmPasswordWarningMessage
+    @FindBy(xpath = "//app-root/app-full-layout/sign-up1/div/div[1]/perfect-scrollbar/div/div[1]/div/form/div[5]/nz-form-item/span")
+    public WebElement confirmPasswordInvalidMessage;
 
     //TermsOfPolicyModalAcceptButton
     @FindBy(xpath = "//*[@id='cdk-overlay-1']/nz-modal-container/div/div/div[3]/div/button/span")

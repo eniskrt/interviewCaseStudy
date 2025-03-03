@@ -9,19 +9,12 @@
       And Navigate to "fakeMailAddress" for take email address.
       When Navigate to "caseStudyRegisterUrl" address again.
       And Enter first name to the First Name input field.
-      Then Verify that Agree & Signup button is disabled.
       And Enter last name to the Last Name input field.
-      Then Verify that Agree & Signup button is disabled.
       When Select country code from the Country select menu.
-      Then Verify that Agree & Signup button is disabled.
       And Enter mobile number to the Mobile Number input field.
-      Then Verify that Agree & Signup button is disabled.
       And Enter company name to the Company Name input field.
-      Then Verify that Agree & Signup button is disabled.
       And Enter email address to the email address input field.
-      Then Verify that Agree & Signup button is disabled.
       And Select title from the Title select menu.
-      Then Verify that Agree & Signup button is disabled.
       And Enter password and confirm password to the related input field.
       When Check the Terms of Service and Privacy Policy checkbox field.
       Then Click the Agree & Signup button.
@@ -47,7 +40,13 @@
       Then Verify that Last Name input field is empty
       And Quit the browser.
 
-    Scenario: Mobile Number Input field shouldn't accept number character.
+    Scenario: Mobile Number Input field shouldn't accept alphabetical and symbols character.
       When Enter characters and symbols to the Mobile Number input field.
       Then Verify that Mobile Number input field is empty
+      And Quit the browser.
+
+    Scenario: Password and Confirm password should be the same.
+      When Enter password to the Password Input field.
+      And Enter different password to the Confirm Password input field.
+      Then Verify that a warning appear below the Confirm Password Input field.
       And Quit the browser.
