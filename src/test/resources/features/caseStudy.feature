@@ -24,13 +24,30 @@
       Then Verify that Agree & Signup button is disabled.
       And Enter password and confirm password to the related input field.
       When Check the Terms of Service and Privacy Policy checkbox field.
-          #I couldn't bypass Cloudflare's automation protection, and based on my research, it is not possible with Selenium.
-          # Therefore, I couldn't create the following test methods.
       Then Click the Agree & Signup button.
-      When Navigate to "fakeMailAddress" address to take the received code.
-      And Take the confirmation code from inbox.
-      When Navigate to "caseStudyRegisterUrl" address again.
-      And Enter the confirmation code to pop-up.
-      Then Click the Ok button.
-      And Verify
+
+            #I couldn't bypass Cloudflare's automation protection, and based on my research, it is not possible with Selenium.
+            # Therefore, I couldn't create the following test methods.
+      #When Navigate to "fakeMailAddress" address to take the received code.
+      #And Take the confirmation code from inbox.
+      #When Navigate to "caseStudyRegisterUrl" address again.
+      #And Enter the confirmation code to pop-up.
+      #Then Click the Ok button.
+      #And Verify
+      And Quit the browser.
+
+    Scenario: First Name Input field shouldn't accept number character.
+      When Enter numbers and symbols to the First Name input field.
+      Then Verify that First Name input field is empty
+      And Quit the browser.
+
+
+    Scenario: Last Name Input field shouldn't accept number character.
+      When Enter numbers and symbols to the Last Name input field.
+      Then Verify that Last Name input field is empty
+      And Quit the browser.
+
+    Scenario: Mobile Number Input field shouldn't accept number character.
+      When Enter characters and symbols to the Mobile Number input field.
+      Then Verify that Mobile Number input field is empty
       And Quit the browser.
