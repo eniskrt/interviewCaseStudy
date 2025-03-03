@@ -10,28 +10,34 @@ This repository contains automation scripts for registering and logging into a l
 2. Navigate to "fakeMailAddress" to obtain an email address.
 3. Navigate back to "caseStudyRegisterUrl".
 4. Enter the first name in the First Name input field.
-5. Verify that the Agree & Signup button is disabled.
-6. Enter the last name in the Last Name input field.
-7. Verify that the Agree & Signup button is disabled.
-8. Select a country code from the Country select menu.
-9. Verify that the Agree & Signup button is disabled.
-10. Enter a mobile number in the Mobile Number input field.
-11. Verify that the Agree & Signup button is disabled.
-12. Enter a company name in the Company Name input field.
-13. Verify that the Agree & Signup button is disabled.
-14. Enter an email address in the Email Address input field.
-15. Verify that the Agree & Signup button is disabled.
-16. Select a title from the Title select menu.
-17. Verify that the Agree & Signup button is disabled.
-18. Enter and confirm a password in the corresponding input fields.
-19. Check the Terms of Service and Privacy Policy checkbox field.
-20. Click the Agree & Signup button.
-21. Navigate to "fakeMailAddress" to retrieve the received code.
-22. Extract the confirmation code from the inbox.
-23. Navigate back to "caseStudyRegisterUrl".
-24. Enter the confirmation code in the pop-up.
-25. Click the OK button.
-26. Quit the browser.
+5. Enter the last name in the Last Name input field.
+6. Select a country code from the Country select menu.
+7. Enter a mobile number in the Mobile Number input field.
+8. Enter a company name in the Company Name input field.
+9. Enter an email address in the Email Address input field.
+10. Select a title from the Title select menu.
+11. Enter and confirm a password in the corresponding input fields.
+12. Check the Terms of Service and Privacy Policy checkbox field.
+13. Click the Agree & Signup button.
+14. Navigate to "fakeMailAddress" to retrieve the received code.
+15. Extract the confirmation code from the inbox.
+16. Navigate back to "caseStudyRegisterUrl".
+17. Enter the confirmation code in the pop-up.
+18. Click the OK button.
+19. Quit the browser.
+20. When Enter numbers and symbols to the First Name input field.
+21. Then Verify that First Name input field is empty
+22. And Quit the browser.
+23. When Enter numbers and symbols to the Last Name input field.
+24. Then Verify that Last Name input field is empty
+25. And Quit the browser.
+26. When Enter characters and symbols to the Mobile Number input field.
+27. Then Verify that Mobile Number input field is empty
+28. And Quit the browser.
+29. When Enter password to the Password Input field.
+30. And Enter different password to the Confirm Password input field.
+31. Then Verify that a warning appear below the Confirm Password Input field.
+32. And Quit the browser.
 
 ## Technology Stack
 - **Programming Language**: Java (Version 19)
